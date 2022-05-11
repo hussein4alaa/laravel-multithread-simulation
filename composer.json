@@ -1,0 +1,20 @@
+{
+    "name": "g4t/laravel-multithread",
+    "description": "laravel multithread imulation.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hussein4alaa",
+            "email": "hussein4alaa@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "g4t\\Multithread\\": "src/"
+        }
+    }
+}
+
