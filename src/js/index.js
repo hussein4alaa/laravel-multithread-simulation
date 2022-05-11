@@ -1,4 +1,4 @@
-var axios = require("axios");
+import axios from 'axios';
 
 // Call url using axios
 function start() {
