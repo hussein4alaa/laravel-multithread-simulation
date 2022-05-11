@@ -12,7 +12,6 @@ class Run
         }
         $js = dirname(__FILE__).'/js/index.js';
         $list = json_encode($list);
-        $js = str_replace("\\", "\\\\", $js);
         $command = "node {$js} '{$url}' '{$list}' ";
         shell_exec($command);
     }
