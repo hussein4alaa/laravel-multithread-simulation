@@ -1,7 +1,7 @@
 # laravel multithread simulation
 #### 📌 Note : this library working on linux only (for now).
 
-<img src="https://github.com/hussein4alaa/laravel-multithread-simulation/blob/main/laravel.png?raw=true" width="450" />
+<img src="https://github.com/hussein4alaa/laravel-multithread-simulation/blob/1.0.0/laravel.png?raw=true" width="450" />
 
 ## Installation:
 Install nodejs in your server.
