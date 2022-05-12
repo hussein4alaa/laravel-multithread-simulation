@@ -1,5 +1,5 @@
 # laravel multithread simulation
-#### Note : this library working on linux only (for now).
+#### 📌 Note : this library working on linux only (for now).
 
 <img src="https://github.com/hussein4alaa/laravel-multithread-simulation/blob/main/laravel.png?raw=true" width="450" />
 
