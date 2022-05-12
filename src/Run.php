@@ -1,17 +1,47 @@
 <?php
 
-namespace App\Multithread;
+namespace g4t\Multithread;
+
+use Illuminate\Support\Facades\Route;
 
 class Run
 {
 
-    public static function call($url, $list = [])
+    public static function multithread($list = [])
     {
-        $js = dirname(__FILE__).'/js/foreach.js';
+        $url = self::route();
+        $js = dirname(__FILE__).'/js/index.js';
         $list = json_encode($list);
-        $js = str_replace("\\", "\\\\", $js);
-        $command = "node {$js} '{$url}' '{$list}' ";
+        $command = "node {$js} '{$url['url']}' '{$list}' '{$url['method']}' ";
         shell_exec($command);
+    }
+
+
+
+    public static function route()
+    {
+        $route = Route::current();
+        $url = route($route->getName());
+        $method = $route->methods()[0];
+        return [
+            'url' => $url,
+            'method' => $method
+        ];
+    }
+
+    public static function check()
+    {
+        if(request()->has('multithread'))
+        {
+            return false;
+        }
+        return true;
+    }
+
+
+    public static function request()
+    {
+        return request()->except('multithread');
     }
 
 }
