@@ -1,17 +1,15 @@
 <?php
 
-namespace g4t\Multithread;
+namespace App\Multithread;
 
 class Run
 {
 
-    public static function multithread($url, $list = [])
+    public static function call($url, $list = [])
     {
-        if(is_null($url) OR empty($list)) {
-            return response()->json(["message" => "Params Required"], 401);
-        }
-        $js = dirname(__FILE__).'/js/index.js';
+        $js = dirname(__FILE__).'/js/foreach.js';
         $list = json_encode($list);
+        $js = str_replace("\\", "\\\\", $js);
         $command = "node {$js} '{$url}' '{$list}' ";
         shell_exec($command);
     }
