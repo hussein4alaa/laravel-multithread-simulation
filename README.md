@@ -1,6 +1,8 @@
 # laravel multithread simulation
 #### Note : this library working on linux only (for now).
 
+<img src="https://github.com/hussein4alaa/laravel-multithread-simulation/blob/main/laravel.png?raw=true" width="450" />
+
 ## Installation:
 Install nodejs in your server.
 ```sh
@@ -56,3 +58,7 @@ public function query()
   return $files;
 }
 ```
+
+### License
+
+laravel multithread simulation is free software licensed under the MIT license.
